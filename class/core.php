@@ -1,18 +1,14 @@
 <?php
 
-ini_set('display_errors', '1');
-date_default_timezone_set("America/Chicago");
-
 class _APP
 {
-    public static $dir = '/srv/www/ws.rcc.uchicago.edu/userportal';
+    public static $dir = '';
     public static $uri = '/userportal';
-    public static $slurm = '/project/rcc/yuxing/userportal/';
+
     public static $request = '';
     public static $narg = 0;
     public static $args = array();
-    public static $user = false;
-    public static $extra = array('jquery-ui'=>false, 'flot'=>false);
+
     public static $G = array();
   
     public static function Dump($txt)
@@ -83,8 +79,7 @@ class _APP
     {
         self::$request = trim(str_replace(self::$uri, '', $_SERVER['REQUEST_URI']), '/');
         self::$args = explode('/', self::$request);
-        self::$narg = count(self::$args);
-        if(self::$args==0 || self::$args[0]=='') self::$args = array('home');   
+        self::$narg = count(self::$args); 
     }
 }
 

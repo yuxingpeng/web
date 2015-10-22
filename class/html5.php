@@ -1,6 +1,6 @@
 <?php
 
-if(!class_exists('APP')) return;
+if(!class_exists('APP')) { echo "ERROR: No APP is defined!"; exit(); }
 
 class XMLNode
 {
