@@ -3,7 +3,7 @@
 class _APP
 {
     public static $dir = '';
-    public static $uri = '/userportal';
+    public static $uri = '';
 
     public static $request = '';
     public static $narg = 0;
